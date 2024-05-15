@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/MollyAP/codecrewcalandar#readme",
   "dependencies": {
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
   }
 }
