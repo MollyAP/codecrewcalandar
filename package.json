@@ -1,0 +1,23 @@
+{
+  "name": "codecrewcalandar",
+  "version": "1.0.0",
+  "description": "calendar",
+  "main": "server.js",
+  "scripts": {
+    "test": "No tests available",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MollyAP/codecrewcalandar.git"
+  },
+  "keywords": [
+    "calandar"
+  ],
+  "author": "Molly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MollyAP/codecrewcalandar/issues"
+  },
+  "homepage": "https://github.com/MollyAP/codecrewcalandar#readme"
+}
