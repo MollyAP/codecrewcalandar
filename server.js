@@ -8,19 +8,20 @@ app.use(cors());
 
 let cachedData = null;
 
-function fetchData() {
-  const fetch = require('node-fetch');
-  fetch('https://api.jsonbin.io/v3/b/6643705aacd3cb34a847d035/latest', {
-    headers: {
-      'X-Master-key': '$2a$10$jt7NCradmKBFfCDVM9gHheM5tsr7BLWgofJhxOa/fFIqbgvu2dnEO'
-    }
-  })
-  .then(response => response.json())
-  .then(data => {
+async function fetchData() {
+  try {
+    const fetch = await import('node-fetch'); // Use dynamic import() here
+    const response = await fetch.default('https://api.jsonbin.io/v3/b/6643705aacd3cb34a847d035/latest', {
+      headers: {
+        'X-Master-key': '$2a$10$jt7NCradmKBFfCDVM9gHheM5tsr7BLWgofJhxOa/fFIqbgvu2dnEO'
+      }
+    });
+    const data = await response.json();
     cachedData = data;
     console.log('Data fetched:', cachedData);
-  })
-  .catch(error => console.error('Error fetching data:', error));
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
 }
 
 // Fetch data initially
