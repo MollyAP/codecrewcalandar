@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/MollyAP/codecrewcalandar/issues"
   },
-  "homepage": "https://github.com/MollyAP/codecrewcalandar#readme"
+  "homepage": "https://github.com/MollyAP/codecrewcalandar#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }
