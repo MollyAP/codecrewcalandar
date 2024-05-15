@@ -9,7 +9,7 @@ app.use(cors());
 let cachedData = null;
 
 function fetchData() {
-  import('node-fetch').then(fetch => {
+  const fetch = require('node-fetch');
   fetch('https://api.jsonbin.io/v3/b/6643705aacd3cb34a847d035/latest', {
     headers: {
       'X-Master-key': '$2a$10$jt7NCradmKBFfCDVM9gHheM5tsr7BLWgofJhxOa/fFIqbgvu2dnEO'
@@ -21,10 +21,6 @@ function fetchData() {
     console.log('Data fetched:', cachedData);
   })
   .catch(error => console.error('Error fetching data:', error));
-}).catch(err => {
-  // Handle error if dynamic import fails
-  console.error('Error importing node-fetch:', err);
-});
 }
 
 // Fetch data initially
